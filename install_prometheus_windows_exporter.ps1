@@ -1,4 +1,3 @@
-<powershell>
 #--------------------------------------------------------------------
 # PowerShell Script to Install Prometheus Windows_Exporter on Windows
 # Tested on Windows Server 2019, 2022
@@ -13,4 +12,3 @@ Invoke-WebRequest $URL -OutFile window_exporter.msi
 Start-Process "msiexec.exe" -ArgumentList "/i window_exporter.msi /qn" -Wait
 Remove-Item window_exporter.msi
 Get-Service windows_exporter
-</powershell>
