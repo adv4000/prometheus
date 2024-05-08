@@ -1,7 +1,7 @@
 #!/bin/bash
 #--------------------------------------------------------------------
 # Script to Install Prometheus Node_Exporter on Linux
-# Tested on Ubuntu 22.04, Amazon Linux 2023
+# Tested on Ubuntu 22.04, 24.04, Amazon Linux 2023
 # Developed by Denis Astahov in 2024
 #--------------------------------------------------------------------
 # https://github.com/prometheus/node_exporter/releases
