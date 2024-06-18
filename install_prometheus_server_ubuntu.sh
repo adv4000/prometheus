@@ -4,7 +4,7 @@
 # Tested on Ubuntu 22.04, 24.04
 # Developed by Denis Astahov in 2024
 #--------------------------------------------------------------------
-PROMETHEUS_VERSION="2.51.1"
+PROMETHEUS_VERSION="2.52"
 PROMETHEUS_FOLDER_CONFIG="/etc/prometheus"
 PROMETHEUS_FOLDER_TSDATA="/etc/prometheus/data"
 
