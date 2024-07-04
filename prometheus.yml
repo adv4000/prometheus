@@ -1,0 +1,36 @@
+global:
+  scrape_interval: 15s
+
+
+scrape_configs:
+  - job_name      : "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name      : "ubuntu-servers"
+    static_configs:
+      - targets:
+          - 10.0.0.1:9100
+          - 10:0.0.2:9100
+
+  - job_name      : "windows-servers"
+    static_configs:
+      - targets:
+          - 10.0.0.3:9182
+          - 10:0.0.4:9182
+
+
+  - job_name      : "prod-servers"
+    ec2_sd_configs:
+    - port: 9100
+      filters:
+        - name  : tag:Environment
+          values: ["prod"]
+
+
+  - job_name      : "dev-servers"
+    ec2_sd_configs:
+    - port: 9100
+      filters:
+        - name  : tag:Environment
+          values: ["dev"]
